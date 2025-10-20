@@ -141,7 +141,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _IOR: 1.33333
+    - _IOR: 0.1
     - _IORefraction: 23.18
     - _Metallic: 0
     - _NORMAL: 1
@@ -152,7 +152,7 @@ Material:
     - _QueueOffset: 0
     - _REFRACTION: 1
     - _ReceiveShadows: 1
-    - _Refraction_Strength: 0.029
+    - _Refraction_Strength: 0.014
     - _Second_Direction_Factor: -0.1
     - _Smoothness: 0.93
     - _SmoothnessTextureChannel: 0
