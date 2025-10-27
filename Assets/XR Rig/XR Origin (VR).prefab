@@ -1751,6 +1751,56 @@ MonoBehaviour:
     m_Duration: 0.1
     m_Frequency: 0
   m_AllowHoverHapticsWhileSelecting: 1
+--- !u!1 &3750089622497671225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9015684520863744451}
+  - component: {fileID: 1913607199063836419}
+  m_Layer: 0
+  m_Name: Swinging Arms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9015684520863744451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750089622497671225}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4598097161591638694}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913607199063836419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750089622497671225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3734c1104c7a8347b12627cc9489919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 910540923200559231}
+  leftHand: {fileID: 3832970486585796168}
+  rightHand: {fileID: 5841439889448130053}
+  rightRayInteractor: {fileID: 3274735569075701751}
+  activateSwingAction: {fileID: 9213234727282066240, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  speed: 4
 --- !u!1 &3832970486585796168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,7 +2953,7 @@ GameObject:
   - component: {fileID: 6210963983365503101}
   - component: {fileID: 8125726002342282895}
   m_Layer: 0
-  m_Name: Move
+  m_Name: Joystick Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4943,7 +4993,7 @@ GameObject:
   - component: {fileID: 5923959427988737986}
   - component: {fileID: 6583675865424410726}
   m_Layer: 0
-  m_Name: Locomotion
+  m_Name: Basic Locomotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4965,6 +5015,7 @@ Transform:
   - {fileID: 6210963983365503101}
   - {fileID: 5653868945311220902}
   - {fileID: 1924597527091429496}
+  - {fileID: 9015684520863744451}
   m_Father: {fileID: 3673930360908989893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5923959427988737986
