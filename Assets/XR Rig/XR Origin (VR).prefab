@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 2779285322378949714}
   - component: {fileID: 6311537853433889380}
   - component: {fileID: 7707190138653716912}
+  - component: {fileID: 8126060352376649455}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -978,6 +979,36 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &8126060352376649455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901549681434224546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7d06d7b1858f94ba4eb7b1f2f52e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 910540923200559231}
+  footstepClips:
+  - {fileID: 8300000, guid: 7a9479e5c2f544741bda38404b225274, type: 3}
+  - {fileID: 8300000, guid: 4317b0774ada1a641827c279155d5a0f, type: 3}
+  - {fileID: 8300000, guid: d9f2b9382ffca624c84bb460df1b8c7f, type: 3}
+  - {fileID: 8300000, guid: c02384c58bd134946b037793463f159a, type: 3}
+  - {fileID: 8300000, guid: 4d605098d35d8d14f87257b6a852388f, type: 3}
+  - {fileID: 8300000, guid: acd10c8355f92fd4fad50bce8f9350cf, type: 3}
+  - {fileID: 8300000, guid: e288c9fc4564ffd419c7ef61866db67c, type: 3}
+  - {fileID: 8300000, guid: 8bf65358d98fc6b4ba14c6abb3118428, type: 3}
+  - {fileID: 8300000, guid: c53298c11ffaed44da1f9a4d010ab04e, type: 3}
+  - {fileID: 8300000, guid: 759144f334ccabd41bed0ce3cf10b5cc, type: 3}
+  stepDistance: 0.6
+  minSpeedThreshold: 0.1
+  volume: 0.8
+  randomizePitch: 1
+  pitchRange: {x: 0.9, y: 1.1}
+  stopResetDelay: 0.15
 --- !u!1 &3175563597872111954
 GameObject:
   m_ObjectHideFlags: 0
