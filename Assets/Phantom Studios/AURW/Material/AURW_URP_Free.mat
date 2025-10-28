@@ -132,7 +132,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Foam_Distance: 2
+    - _Foam_Distance: 0.7
     - _Foam_Scale: 5.68
     - _Foam_Seed: 42.8
     - _Foam_Speed_Fix: 5
@@ -153,11 +153,11 @@ Material:
     - _REFRACTION: 1
     - _ReceiveShadows: 1
     - _Refraction_Strength: 0.014
-    - _Second_Direction_Factor: -1.83
+    - _Second_Direction_Factor: -1.64
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: -0.63
+    - _Speed: 0.54
     - _Speed_Factor: 30
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
@@ -172,7 +172,7 @@ Material:
     - _Color: {r: 0.5, g: 0.47843137, b: 0.41960785, a: 1}
     - _Depth_Color: {r: 1, g: 1, b: 1, a: 0.9490196}
     - _Depth_color: {r: 0.14489143, g: 0.69875187, b: 0.8301887, a: 0.9490196}
-    - _Direction: {r: -0.76, g: -0.61, b: 0, a: 0}
+    - _Direction: {r: -0.97, g: -0.97, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 3}
     - _Sjy: {r: 0, g: 0, b: 0, a: 1}

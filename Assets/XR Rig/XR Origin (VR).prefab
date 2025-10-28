@@ -1005,7 +1005,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 759144f334ccabd41bed0ce3cf10b5cc, type: 3}
   stepDistance: 0.6
   minSpeedThreshold: 0.1
-  volume: 0.8
+  volume: 1
   randomizePitch: 1
   pitchRange: {x: 0.9, y: 1.1}
   stopResetDelay: 0.15
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   rightHand: {fileID: 5841439889448130053}
   rightRayInteractor: {fileID: 3274735569075701751}
   activateSwingAction: {fileID: 9213234727282066240, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  speed: 4
+  speed: 6
 --- !u!1 &3832970486585796168
 GameObject:
   m_ObjectHideFlags: 0
