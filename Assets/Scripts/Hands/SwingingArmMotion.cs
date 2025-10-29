@@ -53,10 +53,9 @@ public class SwingingArmMotion : MonoBehaviour
         if (rightRayInteractor != null) rightRayInteractor.enabled = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called at a fixed interval and is independent of frame rate
+    void FixedUpdate()
     {
-
         if (!swingingActive) return;
 
         // Calculate the velocity of the player hand movement
@@ -73,6 +72,17 @@ public class SwingingArmMotion : MonoBehaviour
             characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up));
         }
 
+        // Set the character controller center to match the camera height
+        float headHeight = Mathf.Clamp(Camera.main.transform.localPosition.y, 0.5f, 2f);
+        characterController.height = headHeight;
+        Vector3 newCenter = Vector3.zero;
+        newCenter.y = characterController.height / 2;
+        newCenter.y += characterController.skinWidth;
+        newCenter.x = Camera.main.transform.localPosition.x;
+        newCenter.z = Camera.main.transform.localPosition.z;
+        characterController.center = newCenter;
+
+        // Apply gravity
         characterController.Move(gravity * Time.deltaTime);
         SetPreviousPos();
     }
