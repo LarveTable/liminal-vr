@@ -5,6 +5,9 @@ public class SwitchCorridorWalls : MonoBehaviour
     [SerializeField] private GameObject[] corridorWalls;
 
     private GameObject furthestWallOnEnter;
+
+    private AudioSource playerAudioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +37,13 @@ public class SwitchCorridorWalls : MonoBehaviour
                 corridorWalls[0].transform.Rotate(0f, 180f, 0f, Space.World);
                 furthestWallOnEnter = corridorWalls[0];
             }
+
+            // Turn off the player's audio source
+            playerAudioSource = other.GetComponent<AudioSource>();
+            if (playerAudioSource != null)
+            {
+                playerAudioSource.enabled = false;
+            }
         }
     }
     
@@ -42,6 +52,11 @@ public class SwitchCorridorWalls : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             furthestWallOnEnter.transform.Rotate(0f, 180f, 0f, Space.World);
+            // Turn the player's audio source back on
+            if (playerAudioSource != null)
+            {
+                playerAudioSource.enabled = true;
+            }
         }
     }
 }
