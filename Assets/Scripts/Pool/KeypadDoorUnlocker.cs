@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeypadDoorUnlocker : MonoBehaviour
 {
@@ -7,14 +9,20 @@ public class KeypadDoorUnlocker : MonoBehaviour
     private string enteredCode = ""; // The code entered by the player
     public GameObject greenLight; // Reference to the green light GameObject
     public GameObject redLight; // Reference to the red light GameObject
+    public TextMeshPro codeDisplay; // Reference to the UI text displaying the entered code
+    public string baseDisplayText;
 
     public void EnterDigit(string digit)
     {
         enteredCode += digit;
         Debug.Log("Entered Code: " + enteredCode);
 
+        // Append the digit to the code display
+        codeDisplay.text += digit;
+
         if (enteredCode.Length >= correctCode.Length)
         {
+            codeDisplay.text = baseDisplayText; // Reset display text
             CheckCode();
         }
     }
@@ -80,7 +88,7 @@ public class KeypadDoorUnlocker : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        baseDisplayText = codeDisplay.text;
     }
 
     // Update is called once per frame
