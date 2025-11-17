@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftKeypadCollider
   - RightKeypadCollider
+  - Mop
   layers:
   - Default
   - TransparentFX
