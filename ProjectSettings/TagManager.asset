@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftKeypadCollider
   - RightKeypadCollider
+  - NoColision
   layers:
   - Default
   - TransparentFX
