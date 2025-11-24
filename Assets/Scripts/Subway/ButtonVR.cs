@@ -22,13 +22,13 @@ public class ButtonVR : MonoBehaviour
     Vector3 d1Open;
     Vector3 d2Open;
 
+    Coroutine currentRoutine;
+
     void Start()
     {
-        // sauvegarde de la position initiale (fermée)
         d1Closed = door1.transform.position;
         d2Closed = door2.transform.position;
 
-        // position ouverte
         d1Open = d1Closed + new Vector3(0, 0, slideDistance);
         d2Open = d2Closed + new Vector3(0, 0, -slideDistance);
     }
@@ -40,8 +40,7 @@ public class ButtonVR : MonoBehaviour
             presser = other.gameObject;
             isPressed = true;
 
-            // animation bouton visuelle
-            button.transform.localPosition = new Vector3(0, 0.003f, 0);
+            button.transform.localPosition = new Vector3(0, -0.02f, 0); //-0.01f
 
             onPress.Invoke();
             OpenDoors();
@@ -64,25 +63,41 @@ public class ButtonVR : MonoBehaviour
 
     public void OpenDoors()
     {
-            StartCoroutine(MoveDoors(d1Open, d2Open));
+        // stop animation en cours
+        if (currentRoutine != null)
+            StopCoroutine(currentRoutine);
+
+        currentRoutine = StartCoroutine(MoveDoors(d1Open, d2Open));
     }
 
     public void CloseDoors()
     {
-            StartCoroutine(MoveDoors(d1Closed, d2Closed));
+        // stop animation en cours
+        if (currentRoutine != null)
+            StopCoroutine(currentRoutine);
+
+        currentRoutine = StartCoroutine(MoveDoors(d1Closed, d2Closed));
     }
 
     private IEnumerator MoveDoors(Vector3 target1, Vector3 target2)
     {
-
-        float elapsed = 0f;
-
         Vector3 start1 = door1.transform.position;
         Vector3 start2 = door2.transform.position;
 
-        while (elapsed < duration)
+        // Distance totale "théorique"
+        float totalDistance = Vector3.Distance(d1Closed, d1Open);
+
+        // Distance restante à parcourir
+        float distanceRemaining = Vector3.Distance(start1, target1);
+
+        // Durée proportionnelle
+        float dynamicDuration = duration * (distanceRemaining / totalDistance);
+
+        float elapsed = 0f;
+
+        while (elapsed < dynamicDuration)
         {
-            float t = elapsed / duration;
+            float t = elapsed / dynamicDuration;
 
             door1.transform.position = Vector3.Lerp(start1, target1, t);
             door2.transform.position = Vector3.Lerp(start2, target2, t);
@@ -93,6 +108,5 @@ public class ButtonVR : MonoBehaviour
 
         door1.transform.position = target1;
         door2.transform.position = target2;
-
     }
 }
