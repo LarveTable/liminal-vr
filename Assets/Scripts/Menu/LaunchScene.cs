@@ -11,11 +11,11 @@ public class LaunchScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("LeftKeypadCollider"))
+        if (other.CompareTag("LeftPlayerHand"))
         {
             LeftTriggerAction.action.performed += LoadScene;
         }
-        else if (other.CompareTag("RightKeypadCollider"))
+        else if (other.CompareTag("RightPlayerHand"))
         {
             RightTriggerAction.action.performed += LoadScene;
         }
@@ -23,11 +23,11 @@ public class LaunchScene : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("LeftKeypadCollider"))
+        if (other.CompareTag("LeftPlayerHand"))
         {
             LeftTriggerAction.action.performed -= LoadScene;
         }
-        else if (other.CompareTag("RightKeypadCollider"))
+        else if (other.CompareTag("RightPlayerHand"))
         {
             RightTriggerAction.action.performed -= LoadScene;
         }
