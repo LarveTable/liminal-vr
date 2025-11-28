@@ -7,6 +7,9 @@ TagManager:
   - LeftKeypadCollider
   - RightKeypadCollider
   - Mop
+  - RightPlayerHand
+  - LeftPlayerHand
+  - LockerKey
   layers:
   - Default
   - TransparentFX
