@@ -1401,7 +1401,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 20f42b6a3702dcf4187da4bc517dbd55, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.8
   m_Pitch: 1
@@ -2853,8 +2853,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.08
+  m_Center: {x: -0.03, y: -0.03, z: 0}
 --- !u!114 &8541487425467924630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6496,8 +6496,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.08
+  m_Center: {x: 0.03, y: -0.03, z: 0}
 --- !u!114 &4990216220951858550
 MonoBehaviour:
   m_ObjectHideFlags: 0
