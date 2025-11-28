@@ -4,6 +4,8 @@ public class LockerOpen : MonoBehaviour
 {
     public MonoBehaviour grabScript;
 
+    public GameObject number;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +17,7 @@ public class LockerOpen : MonoBehaviour
         if (other.CompareTag("LockerKey"))
         {
             grabScript.enabled = true;
+            number.SetActive(true);
             Destroy(other.gameObject);
         }
     }
