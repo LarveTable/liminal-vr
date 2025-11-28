@@ -2611,6 +2611,7 @@ GameObject:
   - component: {fileID: 8346963272942182383}
   - component: {fileID: 6488992782507111707}
   - component: {fileID: 8541487425467924630}
+  - component: {fileID: 7575890259143289735}
   m_Layer: 0
   m_Name: Left Hand Controller
   m_TagString: LeftPlayerHand
@@ -2882,6 +2883,30 @@ MonoBehaviour:
   - {fileID: 8346963272942182383}
   - {fileID: 4043006620887749841}
   m_StartingInteractionOverridesMap: []
+--- !u!114 &7575890259143289735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3832970486585796168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a315922594e0a4f49ae5fe19008c325f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Menu Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2cbb3cd4-2bb2-4cc0-9e5e-e106f61b27ed
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &4062733521249270272
 GameObject:
   m_ObjectHideFlags: 0
