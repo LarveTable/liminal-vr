@@ -6,11 +6,15 @@ TagManager:
   tags:
   - LeftKeypadCollider
   - RightKeypadCollider
+  - Mop
+  - RightPlayerHand
+  - LeftPlayerHand
+  - LockerKey
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Blood Layer
   - Water
   - UI
   - Player

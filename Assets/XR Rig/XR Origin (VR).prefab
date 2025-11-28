@@ -2604,7 +2604,7 @@ GameObject:
   - component: {fileID: 8541487425467924630}
   m_Layer: 0
   m_Name: Left Hand Controller
-  m_TagString: Untagged
+  m_TagString: LeftPlayerHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6221,7 +6221,7 @@ GameObject:
   - component: {fileID: 4990216220951858550}
   m_Layer: 0
   m_Name: Right Hand Controller
-  m_TagString: Untagged
+  m_TagString: RightPlayerHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7381,7 +7381,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7436,7 +7436,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
