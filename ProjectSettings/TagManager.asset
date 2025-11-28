@@ -7,11 +7,16 @@ TagManager:
   - LeftKeypadCollider
   - RightKeypadCollider
   - OpenDoor_Theatre
+  - NoColision
+  - Mop
+  - RightPlayerHand
+  - LeftPlayerHand
+  - LockerKey
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Blood Layer
   - Water
   - UI
   - Player
