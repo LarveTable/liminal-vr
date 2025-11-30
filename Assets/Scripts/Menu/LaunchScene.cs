@@ -8,28 +8,33 @@ public class LaunchScene : MonoBehaviour
     public String sceneToLoad;
     public InputActionProperty LeftTriggerAction;
     public InputActionProperty RightTriggerAction;
+    private bool isPlayerInTrigger = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("LeftKeypadCollider"))
+        if (other.CompareTag("LeftPlayerHand"))
         {
             LeftTriggerAction.action.performed += LoadScene;
+            isPlayerInTrigger = true;
         }
-        else if (other.CompareTag("RightKeypadCollider"))
+        else if (other.CompareTag("RightPlayerHand"))
         {
             RightTriggerAction.action.performed += LoadScene;
+            isPlayerInTrigger = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("LeftKeypadCollider"))
+        if (other.CompareTag("LeftPlayerHand"))
         {
             LeftTriggerAction.action.performed -= LoadScene;
+            isPlayerInTrigger = false;
         }
-        else if (other.CompareTag("RightKeypadCollider"))
+        else if (other.CompareTag("RightPlayerHand"))
         {
             RightTriggerAction.action.performed -= LoadScene;
+            isPlayerInTrigger = false;
         }
     }
 
@@ -49,6 +54,10 @@ public class LaunchScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Rotate the object for visual effect around the global Y axis
+        if(!isPlayerInTrigger)
+        {
+            transform.Rotate(Vector3.up, 30 * Time.deltaTime, Space.World);
+        }
     }
 }
