@@ -15,6 +15,14 @@ public class TeleportationActivator : MonoBehaviour
         teleportActivatorAction.action.performed += Action_performed;
     }
 
+    void OnDisable()
+    {
+        if (teleportActivatorAction.action != null)
+        {
+            teleportActivatorAction.action.performed -= Action_performed;
+        }
+    }
+
     private void Action_performed(InputAction.CallbackContext context)
     {
         teleportInteractor.gameObject.SetActive(true);
