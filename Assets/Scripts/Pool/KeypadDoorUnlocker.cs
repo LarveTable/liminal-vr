@@ -10,7 +10,7 @@ public class KeypadDoorUnlocker : MonoBehaviour
     public GameObject greenLight; // Reference to the green light GameObject
     public GameObject redLight; // Reference to the red light GameObject
     public TextMeshPro codeDisplay; // Reference to the UI text displaying the entered code
-    public string baseDisplayText;
+    private string baseDisplayText;
 
     public void EnterDigit(string digit)
     {
