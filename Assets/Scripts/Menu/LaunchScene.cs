@@ -48,6 +48,9 @@ public class LaunchScene : MonoBehaviour
 
     private void LoadScene(InputAction.CallbackContext context)
     {
+        // Disable further input to prevent multiple scene loads
+        LeftTriggerAction.action.performed -= LoadScene;
+        RightTriggerAction.action.performed -= LoadScene;
         SceneManager.LoadScene(sceneToLoad);
     }
 
